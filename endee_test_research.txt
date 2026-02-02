@@ -1,0 +1,20 @@
+# Research Report: Endee Vector Database Performance
+
+## Overview
+Endee (nD) is a specialized vector database optimized for low-latency similarity search. It is engineered using C++20 and leverages hardware-level SIMD (Single Instruction, Multiple Data) optimizations.
+
+## Performance Metrics
+- **Latenncy**: Endee achieves sub-10ms search latency on datasets with over 1 million vectors.
+- **Scalability**: The architecture is designed to scale horizontally, supporting up to 100 million vectors on a single node with optimized IVFFlat indexing.
+- **CPU Support**: 
+    - Intel/AMD: AVX2 and AVX512 support.
+    - Apple Silicon: Specialized NEON kernel for M1/M2/M3 chips.
+    - ARM Servers: SVE2 support.
+
+## Use Cases
+1. **Semantic Search**: Finding documents based on meaning rather than keywords.
+2. **RAG (Retrieval Augmented Generation)**: Providing real-time context to LLMs like GPT-4 or Llama-3.
+3. **Anomaly Detection**: Identifying outliers in high-dimensional financial data.
+
+## Encryption
+Endee supports Queryable Encryption (QE), allowing users to perform similarity searches on encrypted vectors without revealing the underlying data.
